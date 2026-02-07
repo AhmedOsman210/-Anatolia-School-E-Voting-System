@@ -1,0 +1,422 @@
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #ffffff;
+    --text-muted: #cbd5e1;
+    --accent-blue: #3b82f6;
+    --border-color: #334155;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Global Text & Bootstrap Overrides --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: var(--text-main);
+}
+
+p,
+span,
+div,
+li,
+td,
+th {
+    color: inherit;
+}
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+/* Force dark-mode hostile Bootstrap utilities to be visible */
+.text-body,
+.text-dark,
+.text-black,
+.text-reset {
+    color: var(--text-main) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* --- Form Controls & Placeholders --- */
+.form-control,
+.form-select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    background-color: #0f172a !important;
+    border: 1px solid var(--border-color);
+    color: #ffffff !important;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #1a253a !important;
+    border-color: var(--accent-blue);
+    color: #ffffff !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Webkit/Chrome/Edge */
+::-webkit-input-placeholder {
+    color: var(--text-muted) !important;
+    opacity: 1;
+}
+
+/* Firefox */
+::-moz-placeholder {
+    color: var(--text-muted) !important;
+    opacity: 1;
+}
+
+/* IE 10+ */
+:-ms-input-placeholder {
+    color: var(--text-muted) !important;
+    opacity: 1;
+}
+
+/* Standard */
+::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 1;
+}
+
+.form-label {
+    color: var(--text-main);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    border: none;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    color: #ffffff;
+}
+
+/* Auth Pages */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+}
+
+.auth-image-side {
+    flex: 1;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('../img/school-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem;
+    position: relative;
+}
+
+.auth-form-side {
+    width: 450px;
+    background-color: #0f172a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: #0f172a;
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 2rem 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+/* Dashboard Cards */
+.stat-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: var(--text-main);
+}
+
+.activity-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+/* Candidate Cards */
+.candidate-card {
+    background-color: white;
+    /* Consider changing this if you want dark mode for cards too, but kept as is for now */
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s;
+    height: 100%;
+    color: #1e293b;
+    /* Keep dark text for white cards if they remain white */
+}
+
+/* If the user wants EVERYTHING white, we should check where candidate-card is used.
+   Assuming for now 'all system text' refers to the main dark interface.
+*/
+
+.candidate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.candidate-info {
+    padding: 1.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .auth-image-side {
+        display: none;
+    }
+
+    .auth-form-side {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 0;
+        display: none;
+    }
+}
+
+/* Enhanced Candidate Table */
+.data-table-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+    color: var(--text-main);
+    --bs-table-color: var(--text-main);
+    --bs-table-bg: transparent;
+}
+
+.table th {
+    background-color: rgba(15, 23, 42, 0.5);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table td {
+    padding: 1.25rem 1.5rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Vote Confirmation Page */
+.confirmation-wrapper {
+    min-height: 100vh;
+    background-color: #05160a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.success-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #00e676;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(0, 230, 118, 0.3);
+    margin-bottom: 2.5rem;
+}
+
+.confirmation-card {
+    background: linear-gradient(135deg, rgba(20, 41, 30, 0.5), rgba(10, 25, 18, 0.5));
+    border: 1px solid rgba(0, 230, 118, 0.1);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.btn-success-bright {
+    background-color: #00e676;
+    color: #05160a;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-success-bright:hover {
+    background-color: #00c853;
+    transform: scale(1.02);
+}
+
+/* Enhanced Results UI */
+.results-banner {
+    background: linear-gradient(90deg, #1e40af, #3b82f6);
+    border-radius: 1.5rem;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.results-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.winner-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+    margin-top: -50px;
+}
+
+.winner-img-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.winner-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #fbbf24;
+    color: #0f172a;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--card-bg);
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: 300px;
+}
+
+.bar {
+    width: 60px;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 0.5rem 0.5rem 0 0;
+    position: relative;
+    transition: height 1s ease-out;
+}
+
+.bar-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #3b82f6;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
