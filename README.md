@@ -14,23 +14,28 @@ A modern, secure, and premium E-voting system designed for **Anatolia School**. 
 ## 📸 Screenshots
 
 ### 1. Admin Dashboard Overview
-![Admin Dashboard](screenshots/admin_dashboard.png)
+![Admin Dashboard](<img width="1890" height="857" alt="Screenshot 2026-02-07 141129" src="https://github.com/user-attachments/assets/d75bad05-3383-44cb-abac-4356b111bf0e" />
+)
 *Comprehensive overview of election status, voter turnout, and live activity.*
 
 ### 2. Candidate Management
-![Candidate Management](screenshots/candidate_management.png)
+![Candidate Management](<img width="1888" height="845" alt="Screenshot 2026-02-07 141112" src="https://github.com/user-attachments/assets/dfa28caa-0cad-4fe7-8637-9b485904dc3b" />
+)
 *Add and edit student candidates for the election.*
 
 ### 3. Voter Access Management
-![Voter Access](screenshots/voter_management.png)
+![Voter Access](<img width="1888" height="845" alt="Screenshot 2026-02-07 141112" src="https://github.com/user-attachments/assets/fc491a98-3898-4271-80db-cd2f7be73f41" />
+)
 *Manage student access and track who has already voted.*
 
 ### 4. Election Results & Analytics
-![Election Results](screenshots/results_analytics.png)
+![Election Results](<img width="1878" height="849" alt="Screenshot 2026-02-07 141158" src="https://github.com/user-attachments/assets/cf3408dc-2890-404e-8834-0197e77d9e03" />
+)
 *Detailed breakdown of votes by grade level and official winner declaration.*
 
 ### 5. Final Results Public View
-![Public Results](screenshots/public_results.png)
+![Public Results](<img width="1903" height="849" alt="Screenshot 2026-02-07 141145" src="https://github.com/user-attachments/assets/bfdfb840-e97f-4e00-a7f5-4391de473f07" />
+)
 *The final announcement screen for the student body.*
 
 ## 🛠️ Tech Stack
